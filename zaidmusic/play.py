@@ -497,7 +497,7 @@ async def ytplay(_, message: Message):
     for i in message.command[1:]:
         query += " " + str(i)
     print(query)
-    await lel.edit("🔄 **ʜɪ \n\n**{user.first_name} ᴄᴏɴɴᴇᴄᴛɪɴɢ ᴛᴏ ᴘɢ ꜱᴇʀᴠᴇʀ ᴡᴀɪᴛ!!!**")
+    await lel.edit("🔄 **\n\n**ᴄᴏɴɴᴇᴄᴛɪɴɢ ᴛᴏ ᴘɪɢᴀsᴜs ꜱᴇʀᴠᴇʀ ᴡᴀɪᴛ!!!**")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -542,7 +542,7 @@ async def ytplay(_, message: Message):
                 InlineKeyboardButton(
                     "📢 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/PigasusUpdates"
                 ),
-                InlineKeyboardButton("💭 ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/VegetaSupport"),
+                InlineKeyboardButton("💭 ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/pigasusSupport"),
             ],
         ]
     )
