@@ -147,7 +147,7 @@ def updated_stats(chat, queue, vol=100):
             stats += "🎚 ᴠᴏʟᴜᴍᴇ: {}%\n".format(vol)
             stats += "🎵 ꜱᴏɴɢ ᴘʟᴀʏᴇᴅ: `{}`\n".format(len(que))
             stats += "💡 ɴᴏᴡ ᴘʟᴀʏɪɴɢ: **{}**\n".format(queue[0][0])
-            stats += "🎧 ᴢᴀɪᴅ ᴜꜱᴇʀ ʙʏ: {}".format(queue[0][1].mention)
+            stats += "🎧 ᴠᴇɢᴇᴛᴀ ᴜꜱᴇʀ ʙʏ: {}".format(queue[0][1].mention)
     else:
         stats = None
     return stats
@@ -167,7 +167,7 @@ def r_ply(type_):
                 InlineKeyboardButton("⏭", "skip"),
             ],
             [
-                InlineKeyboardButton("📖 Pʅαყʅιʂƚ", "playlist"),
+                InlineKeyboardButton("📖 ᴘʟᴀʏʟɪsᴛ", "playlist"),
             ],
             [InlineKeyboardButton("🗑 ᴄʟᴏꜱᴇ", "cls")],
         ]
@@ -385,7 +385,7 @@ async def m_cb(b, cb):
                     InlineKeyboardButton("⏭", "skip"),
                 ],
                 [
-                    InlineKeyboardButton("📖 ρʅαყʅιʂƚ", "playlist"),
+                    InlineKeyboardButton("📖 ᴘᴀʟʏʟɪsᴛ", "playlist"),
                 ],
                 [InlineKeyboardButton("🗑 ᴄʟᴏꜱᴇ", "cls")],
             ]
@@ -497,7 +497,7 @@ async def ytplay(_, message: Message):
     for i in message.command[1:]:
         query += " " + str(i)
     print(query)
-    await lel.edit("🔄 **ᴄᴏɴɴᴇᴄᴛɪɴɢ ᴛᴏ ᴘɢ ꜱᴇʀᴠᴇʀ...**")
+    await lel.edit("🔄 **ʜɪ \n\n**{user.first_name} ᴄᴏɴɴᴇᴄᴛɪɴɢ ᴛᴏ ᴘɢ ꜱᴇʀᴠᴇʀ ᴡᴀɪᴛ!!!**")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -540,9 +540,9 @@ async def ytplay(_, message: Message):
             ],
             [
                 InlineKeyboardButton(
-                    "☑️ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/PigasusUpdates"
+                    "📢 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/PigasusUpdates"
                 ),
-                InlineKeyboardButton("ꜱᴜᴘᴘᴏʀᴛ ⚡", url=f"https://t.me/VegetaSupport"),
+                InlineKeyboardButton("💭 ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/VegetaSupport"),
             ],
         ]
     )
