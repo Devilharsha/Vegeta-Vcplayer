@@ -397,7 +397,7 @@ async def m_cb(b, cb):
             qeue.pop(0)
         if chet_id not in callsmusic.pytgcalls.active_calls:
             await cb.answer(
-                "assistant is not connected to voice chat !", show_alert=True
+                "**Assistant is not connected to voice chat !**", show_alert=True
             )
         else:
             callsmusic.queues.task_done(chet_id)
@@ -424,7 +424,7 @@ async def m_cb(b, cb):
                 pass
 
             callsmusic.pytgcalls.leave_group_call(chet_id)
-            await cb.message.edit("✅ music playback has ended")
+            await cb.message.edit("**✅ music playback has ended**")
         else:
             await cb.answer(
                 "assistant is not connected to voice chat !", show_alert=True
@@ -497,7 +497,7 @@ async def ytplay(_, message: Message):
     for i in message.command[1:]:
         query += " " + str(i)
     print(query)
-    await lel.edit("🔄**ᴄᴏɴɴᴇᴄᴛɪɴɢ ᴛᴏ ᴘɪɢᴀsᴜs ꜱᴇʀᴠᴇʀ ᴡᴀɪᴛ!!!**")
+    await lel.edit("🔄**ᴄᴏɴɴᴇᴄᴛɪɴɢ ᴛᴏ ᴘɪɢᴀsᴜs ꜱᴇʀᴠᴇʀ ᴡᴀɪᴛ**!!!")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -514,7 +514,7 @@ async def ytplay(_, message: Message):
 
     except Exception as e:
         await lel.edit(
-            "😕 **ᴄᴏᴜʟᴅɴ'ᴛ ꜰɪɴᴅ ꜱᴏɴɢ ʏᴏᴜ ʀᴇQᴜᴇꜱᴛᴇᴅ**\n\n» **ᴘʟᴇᴀꜱᴇ ᴘʀᴏᴠɪᴅᴇ ᴛʜᴇ ᴄᴏʀʀᴇᴄᴛ ꜱᴏɴɢ ɴᴀᴍᴇ ᴏʀ ɪɴᴄʟᴜᴅᴇ ᴛʜᴇ ᴀʀᴛɪꜱᴛ'ꜱ ɴᴀᴍᴇ ᴀꜱ ᴡᴇʟʟ**"
+            "😕 **dude give some text for play song!!!**"
         )
         print(str(e))
         return
